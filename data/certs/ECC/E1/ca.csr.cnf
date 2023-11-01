@@ -1,0 +1,15 @@
+[ req ]
+default_bits        = 4096
+distinguished_name  = req_distinguished_name
+string_mask         = utf8only
+
+# SHA-1 is deprecated, so use SHA-2 instead.
+default_md          = sha384
+prompt              = no
+
+[ req_distinguished_name ]
+# See <https://en.wikipedia.org/wiki/Certificate_signing_request>.
+countryName                     = CN
+0.organizationName              = ORG
+organizationalUnitName          = Department
+commonName                      = CA ECC E1

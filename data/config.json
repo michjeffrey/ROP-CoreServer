@@ -1,0 +1,69 @@
+{
+    "ports": {
+        "getCAHttps": 61000,
+        "registerHttps": 61002,
+        "getCertHttps": 61001,
+        "keepAliveTCP": 61003,
+        "signalingTLS": 61005,
+        "streamTLS": 61006,
+        "streamTCP": 61007,
+        "clientHttp": 61009,
+        "clientRtsp": 61008
+    },
+    "serverHost": "localhost",
+    "cert": {
+        "workDir": "/data/certs",
+        "serverCertValidDays": 90,
+        "serverCertValidDaysBefore": 30,
+        "clientCertValidDays": 180
+    },
+    "deviceStream": {
+        "encryptMode": "TLS"
+    },
+    "authCode": {
+        "signKey": "7UHYlG8RF0DjCMsn",
+        "expiredIn": 60
+    },
+    "alarm": {
+        "enabled": false,
+        "notificationURL": ""
+    },
+    "upgrade": {
+        "filePath": "/data/firmware",
+        "maxSession": 100,
+        "sessionTTL": 3600000
+    },
+    "rtsp": {
+        "playSessionTTL": 30000,
+        "playURLPrefix": "rtsp://localhost:61008"
+    },
+    "timeout": {
+        "streamTimeout": 30000,
+        "signalingExec": 10000,
+        "signalingConnectionIdle": 30000
+    },
+    "deviceAuth": {
+        "deviceKeys": {
+            "oof0bBqcuEOtT6tC": "NG3Sp8mEAm0lEokTRCncdJk7EPOWzHJ8"
+        },
+        "currentKeyIndex": "oof0bBqcuEOtT6tC"
+    },
+    "application": {
+        "instanceId": "553ef7e3-16d5-4ff0-82bb-099b4b1697c4"
+    },
+    "logs": {
+        "drivers": {},
+        "subjects": {
+            "default": {
+                "enabled": true,
+                "levels": [
+                    "info",
+                    "error",
+                    "debug",
+                    "warning"
+                ],
+                "driver": "console"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+[ req ]
+distinguished_name  = req_distinguished_name
+string_mask         = utf8only
+req_extensions      = req_ext # If there is IP address required
+x509_extensions     = v3_req # If there is IP address required
+
+# SHA-1 is deprecated, so use SHA-2 instead.
+default_md          = sha256
+prompt              = no
+
+[ req_distinguished_name ]
+# See <https://en.wikipedia.org/wiki/Certificate_signing_request>.
+commonName                      = localhost
+
+[req_ext]
+subjectAltName = @alt_names
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = localhost
